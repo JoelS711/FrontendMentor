@@ -64,7 +64,7 @@ main{
 }
 
 .container{
-    padding: 2rem;
+    padding: 3rem;
     width: 80%;
 }
 
@@ -76,7 +76,7 @@ main{
 
 .container__inputs{
     display: flex;
-    justify-content: center;
+    justify-content: start;
     gap: 2rem;
 }
 
@@ -105,4 +105,35 @@ label{
 
 input::placeholder{
     color: hsl(0, 0%, 69%);
+}
+
+.container__button{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.container__line{
+    border: 0;
+    border-top: 2px solid hsl(0, 0%, 86%);
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+
+.container__btn{
+    background-color: #854dff;
+    border: none;
+    border-radius: 50%;
+    padding: 1rem;
+    z-index: 1;
+    cursor: pointer;
+    transition: .4s ease;
+}
+
+.container__btn:hover{
+    transform: scale(1.1);
 }
