@@ -5,31 +5,24 @@
     padding: 0;
   }
 
-@font-face {
+  @font-face {
     font-family: 'Poppins';
     src: url('../assets/fonts/Poppins-Regular.ttf') format('truetype');
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url('../assets/fonts/Poppins-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Poppins';
-    src: url('../assets/fonts/Poppins-BoldItalic.ttf') format('truetype');
-    font-weight: bold;
+    src: url('../assets/fonts/Poppins-Italic.ttf') format('truetype');
+    font-weight: 400;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url('../assets/fonts/Poppins-ExtraBold.ttf') format('truetype');
-    font-weight: 800;
+    src: url('../assets/fonts/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
     font-style: normal;
 }
 
@@ -40,15 +33,11 @@
     font-style: italic;
 }
 
-@font-face {
-    font-family: 'Poppins';
-    src: url('../assets/fonts/Poppins-Italic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
-}
-
 body{
     background-color: hsl(0, 0%, 94%);
+    height: 100dvh;
+    width: 100%;
+    font-family: 'Poppins';
 }
 
  /* Eliminar flechas en navegadores WebKit (Chrome, Safari, etc.) */
@@ -58,20 +47,24 @@ body{
      margin: 0;
  }
 
-main{
+ main{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.container{
-    padding: 3rem;
-    width: 80%;
-}
-
 .container__card{
     background-color: #fff;
-    border-radius: 1rem 1rem 6rem 1rem;
-    padding: 2rem;
+    border-radius: 1rem 1rem 12rem 1rem;
+    padding: 4rem;
+    width: 50%;
 }
 
 .container__inputs{
@@ -87,7 +80,6 @@ main{
 }
 
 label{
-    font-family: 'Poppins';
     color: hsl(0, 1%, 44%);
     font-weight: 400;
     font-style: normal;
@@ -99,8 +91,9 @@ label{
     font-size: 32px;
     height: 4rem;
     padding-left: .6rem;
-    font-weight: bold;
+    font-weight: 700;
     font-style: normal;
+    width: 8rem;
 }
 
 input::placeholder{
@@ -136,4 +129,15 @@ input::placeholder{
 
 .container__btn:hover{
     transform: scale(1.1);
+}
+
+.container__result{
+    font-family: 'Poppins';
+    font-weight: 800;
+    font-size: 4rem;
+    font-style: italic;
+}
+
+.container__datespan{
+    color: #854dff;
 }
