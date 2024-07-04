@@ -1,52 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="styles/style.css">
   <title>Frontend Mentor | Age calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  
 </head>
+
 <body>
 
-<main>
-  <section class="container">
-    <div class="container__card">
-      <div class="container__inputs">
-        <div class="container__form-group">
-          <label for="day">DAY</label>
-          <input type="number" id="day" name="day" min="1" max="31" class="container__input" placeholder="DD" required>
+  <main>
+    <section class="container">
+      <div class="container__card">
+        <div class="container__inputs">
+          <div class="container__form-group">
+            <label for="day">DAY</label>
+            <input type="number" id="day" name="day" min="1" max="31" class="container__input" placeholder="DD"
+              required>
+          </div>
+          <div class="container__form-group">
+            <label for="month">MONTH</label>
+            <input type="number" id="month" name="month" min="1" max="12" class="container__input" placeholder="MM"
+              required>
+          </div>
+          <div class="container__form-group">
+            <label for="year">YEAR</label>
+            <input type="number" id="year" name="year" min="1900" max="2100" class="container__input" placeholder="YYYY"
+              required>
+          </div>
         </div>
-        <div class="container__form-group">
-          <label for="month">MONTH</label>
-          <input type="number" id="month" name="month" min="1" max="12" class="container__input" placeholder="MM" required>
+        <div class="container__button">
+          <hr class="container__line">
+          <button class="container__btn" onclick="calculateAge()"><img src="assets/images/icon-arrow.svg"
+              alt="Icon Arrow"></button>
         </div>
-        <div class="container__form-group">
-          <label for="year">YEAR</label>
-          <input type="number" id="year" name="year" min="1900" max="2100" class="container__input" placeholder="YYYY" required>
+        <div class="container__result">
+          <p class="container__date"><span id="years" class="container__datespan">--</span> years</p>
+          <p class="container__date"><span id="months" class="container__datespan">--</span> months</p>
+          <p class="container__date"><span id="days" class="container__datespan">--</span> days</p>
+        </div>
       </div>
-      </div>
-      <div class="container__button">
-        <hr class="container__line">
-        <button class="container__btn"><img src="assets/images/icon-arrow.svg" alt="Icon Arrow"></button>
-      </div>
-      <div class="container__result">
-        <p class="container__date"><span id="years" class="container__datespan">--</span> years</p>
-        <p class="container__date"><span id="months" class="container__datespan">--</span> months</p>
-        <p class="container__date"><span id="days" class="container__datespan">--</span> days</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-</main>
-  
+  </main>
+
   <!--<div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">JoelS711</a>.
   </div>-->
+  <script src="app/app.js"></script>
 </body>
+
 </html>
