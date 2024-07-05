@@ -103,6 +103,15 @@ input::placeholder{
     color: hsl(0, 0%, 69%);
 }
 
+.error-message {
+    color: red;
+    font-size: 0.8em;
+}
+
+.input-error {
+    border: 2px solid red;
+}
+
 .container__button{
     position: relative;
     width: 100%;
