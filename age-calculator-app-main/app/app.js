@@ -6,6 +6,9 @@ function calculateAge() {
     document.getElementById('day').classList.remove('input-error');
     document.getElementById('month').classList.remove('input-error');
     document.getElementById('year').classList.remove('input-error');
+    document.getElementById('day-label').classList.remove('label-error');
+    document.getElementById('month-label').classList.remove('label-error');
+    document.getElementById('year-label').classList.remove('label-error');
 
     const today = new Date();
     const day = parseInt(document.getElementById('day').value, 10);
@@ -19,6 +22,7 @@ function calculateAge() {
     if (isNaN(day) || day < 1 || day > 31) {
         document.getElementById('day-error').textContent = 'Must be a valid day';
         document.getElementById('day').classList.add('input-error');
+        document.getElementById('day-label').classList.add('label-error');
         valid = false;
     }
 
@@ -26,6 +30,7 @@ function calculateAge() {
     if (isNaN(month) || month < 0 || month > 11) {
         document.getElementById('month-error').textContent = 'Must be a valid month';
         document.getElementById('month').classList.add('input-error');
+        document.getElementById('month-label').classList.add('label-error');
         valid = false;
     }
 
@@ -33,6 +38,7 @@ function calculateAge() {
     if (isNaN(year) || year > today.getFullYear()) {
         document.getElementById('year-error').textContent = 'Must be in the past';
         document.getElementById('year').classList.add('input-error');
+        document.getElementById('year-label').classList.add('label-error');
         valid = false;
     }
 
@@ -48,6 +54,9 @@ function calculateAge() {
         document.getElementById('day').classList.add('input-error');
         document.getElementById('month').classList.add('input-error');
         document.getElementById('year').classList.add('input-error');
+        document.getElementById('day-label').classList.add('label-error');
+        document.getElementById('month-label').classList.add('label-error');
+        document.getElementById('year-label').classList.add('label-error');
         return;
     }
 
