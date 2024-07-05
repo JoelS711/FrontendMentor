@@ -58,6 +58,7 @@ body{
     width: 100%;
     display: flex;
     justify-content: center;
+    padding: 2rem;
 }
 
 .container__card{
@@ -109,6 +110,7 @@ input::placeholder{
 .error-message {
     color: red;
     font-size: 0.8em;
+    font-style: italic;
 }
 
 .input-error {
@@ -159,4 +161,44 @@ input::placeholder{
 
 .container__datespan{
     color: #854dff;
+}
+
+@media screen and (max-width: 1024px){
+    .container__card{
+        width: 100%;
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    label{
+        font-size: .8rem;
+    }
+
+    .container__inputs{
+        justify-content: space-evenly;
+        gap: 0;
+    }
+
+    .container__input{
+        font-size: 1.2rem;
+        height: 3rem;
+        width: 5rem;
+    }
+    
+    .container__button{
+        justify-content: center;
+    }
+
+    .container__result{
+        font-size: 2.6rem;
+    }
+
+    .error-message {
+        font-size: 0.5em;
+    }
+
+    img{
+        width: 2.6rem;
+    }
+    
 }
